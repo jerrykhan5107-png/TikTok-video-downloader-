@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Downloader Pro</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* MAIN CARD */
+.container {
+  width: 420px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  text-align: center;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+/* TITLE */
+h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.fetch-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff0050, #ff4d6d);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fetch-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* SOCIAL BUTTONS */
+.links button {
+  margin: 5px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.links button:first-child {
+  background: #25D366;
+  color: white;
+}
+
+.links button:last-child {
+  background: #0088cc;
+  color: white;
+}
+
+.links button:hover {
+  transform: scale(1.05);
+}
+
+/* LOADING */
+.loading {
+  display: none;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #facc15;
+}
+
+/* PROFILE CARD */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+
+.profile img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* STATS */
+.stats {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* MEDIA */
+video, audio, img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* DOWNLOAD BUTTON */
+.download {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.download:hover {
+  transform: scale(1.05);
+}
+
+/* DESCRIPTION */
+p {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 12px;
+  font-size: 11px;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🎵 TikTok Downloader Pro</h1>
+
+  <input type="text" id="videoURL" placeholder="Paste TikTok link...">
+  <button class="fetch-btn" onclick="fetchTikTokData()">Fetch Video</button>
+
+  <div class="links">
+    <button onclick="window.open('https://whatsapp.com')">WhatsApp</button>
+    <button onclick="window.open('https://t.me')">Telegram</button>
+  </div>
+
+  <div class="loading" id="loading">Loading...</div>
+  <div id="result"></div>
+
+  <footer>Made with ❤️</footer>
+</div>
+
+<script>
+// your JS same rahega (no change needed)
+</script>
+
+</body>
+</html>
